@@ -5,10 +5,10 @@ The RAK Environmental Sensor node is based on the following WisBlock Modules
 ![image](https://user-images.githubusercontent.com/195788/214912909-54f4674b-fd85-48f9-b2c0-b7f01de0a821.png)
 
 There are two projects in separate folders
-- RAK11200 InfluxDB
+- RAK11200
 - RAK3372 LoRaWAN
 
-### RAK11200 InfluxDB
+### RAK11200
 Measured values will be send by WiFi to an InfluxDB data base for visualization.
 
 ### RAK3372 LoRaWAN
