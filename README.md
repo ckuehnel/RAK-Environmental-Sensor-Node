@@ -2,7 +2,7 @@
 
 The RAK Environmental Sensor node is based on the following WisBlock Modules 
 
-![image](https://user-images.githubusercontent.com/195788/214912909-54f4674b-fd85-48f9-b2c0-b7f01de0a821.png)
+![image](https://user-images.githubusercontent.com/195788/216775481-fd42f565-26e3-4ed2-b131-239d62add14a.png)
 
 There are two projects in separate folders
 - RAK11200
