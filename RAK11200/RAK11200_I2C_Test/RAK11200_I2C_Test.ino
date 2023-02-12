@@ -10,6 +10,10 @@
 
 void setup() 
 {
+  // Sensor power on.
+  pinMode(WB_IO2, OUTPUT);
+  digitalWrite(WB_IO2, HIGH); // set 3V3_S 
+  
   Serial.begin(115200);
   delay(2000);              // wait for serial monitor
   if (DEBUG) Serial.println(F("Initializing..."));
