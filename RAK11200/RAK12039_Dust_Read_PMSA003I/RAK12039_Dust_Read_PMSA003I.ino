@@ -7,7 +7,7 @@
    @copyright Copyright (c) 2022
 **/
 
-#include "RAK12039_PMSA003I.h" // https://github.com/RAKWireless/RAK12039-PMSA003I
+#include "RAK12039_PMSA003I.h"
 
 RAK_PMSA003I PMSA003I;
 
@@ -28,8 +28,20 @@ void setup()
   digitalWrite(SET_PIN, HIGH);  
    
   // Initialize Serial for debug output.
+  time_t timeout = millis();
   Serial.begin(115200);
-  delay(2000);
+  while (!Serial)
+  {
+    if ((millis() - timeout) < 5000)
+    {
+      delay(100);
+    }
+    else
+    {
+      break;
+    }
+  }
+
   Wire.begin();
   if(!PMSA003I.begin()) 
   {
