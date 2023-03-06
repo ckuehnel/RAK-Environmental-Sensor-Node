@@ -19,6 +19,8 @@ RAK3372 (STM32) is base for this node. Measured values will be packed as Cayenne
 ### Sensirion SEN55 & RAK1300 LoRaWAN
 Data aquired by Sensirion SEN55 and packed as Cayenne Low Power Payload (LPP) is sent via TTN to Datacake for visualization.
 
+![Datacake-1](https://user-images.githubusercontent.com/195788/223125721-51be8444-5f63-472d-b51b-f017b2c7d643.png)
+
 You will find further information to LoRaWAN-nodes and TTS(CE) in my books:
 
 ![LoRa_Cover_D](https://user-images.githubusercontent.com/195788/214926264-a648e74a-572d-487c-996b-6d29f237d446.png)
