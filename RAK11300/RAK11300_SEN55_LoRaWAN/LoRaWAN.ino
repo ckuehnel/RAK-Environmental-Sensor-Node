@@ -146,6 +146,7 @@ void lorawan_confirm_class_handler(DeviceClass_t Class)
 void lorawan_unconf_finished(void)
 {
   Serial.println("TX finished");
+  digitalWrite(LED_BLUE, LOW);
 }
 
 void lorawan_conf_finished(bool result)
@@ -160,7 +161,7 @@ void send_lora_frame(void)
     //Not joined, try again later
     return;
   }
-
+  digitalWrite(LED_BLUE, HIGH);
   memset(m_lora_app_data.buffer, 0, LORAWAN_APP_DATA_BUFF_SIZE);
   memcpy(m_lora_app_data.buffer, lpp.getBuffer(), lpp.getSize());
   m_lora_app_data.port = gAppPort;
@@ -178,4 +179,3 @@ void send_lora_frame(void)
     Serial.printf("lmh_send fail count %d\n", count_fail);
   }
 }
-

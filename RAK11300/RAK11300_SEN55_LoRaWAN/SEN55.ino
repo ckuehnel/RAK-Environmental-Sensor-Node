@@ -65,8 +65,7 @@ void readSEN55(void)
   uint16_t error;
   char errorMessage[256];
 
-  delay(1000);
-
+  digitalWrite(LED_GREEN, HIGH);
   error = sen5x.readMeasuredValues(
       massConcentrationPm1p0, massConcentrationPm2p5, massConcentrationPm4p0,
       massConcentrationPm10p0, ambientHumidity, ambientTemperature, vocIndex,
@@ -107,5 +106,8 @@ void readSEN55(void)
     Serial.print("iNOx: ");
     if (isnan(noxIndex)) Serial.println("n/a");
     else Serial.println(noxIndex,0);
+    digitalWrite(LED_GREEN, LOW);
+    printOnOLED();
   }
+  delay(5000);
 }
